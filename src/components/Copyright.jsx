@@ -5,7 +5,7 @@ export const Copyright = (props) => {
     <Typography variant="body2" color="text.secondary" {...props}>
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Centrum zabaw dla dzieci Edan
+        Biuro Podróży Globetrotter Travel
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
