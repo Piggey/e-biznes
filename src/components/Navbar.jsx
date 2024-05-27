@@ -36,14 +36,14 @@ export const Navbar = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <Avatar
             alt="Logo"
-            src="src/assets/edan_logo.png"
+            src="src/assets/logo.png"
             component={Link}
             to="/"
             sx={{ width: 64, height: 64 }}
           />
           <Typography variant="h4" component="div">
             <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              Edan
+              Globetrotter Travel
             </Link>
           </Typography>
         </div>

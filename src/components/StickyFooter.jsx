@@ -22,26 +22,26 @@ export const StickyFooter = () => {
         <Container maxWidth="sm">
           <div style={{ display: "flex", alignItems: "center" }}>
             <img
-              src="src/assets/edan_logo.png"
-              alt="Edan Logo"
+              src="src/assets/logo.png"
+              alt="Globetrotter Travel Logo"
               style={{ width: 50, marginRight: 10 }}
             />
             <div>
               <Typography variant="h6">
-                Centrum zabaw dla dzieci Edan
+                Biuro Podróży Globetrotter Travel
               </Typography>
             </div>
           </div>
         </Container>
         <Container maxWidth="sm">
           <Typography variant="body2">
-            ul. Sulejowska 45
+            Al. Politechniki 8
             <br />
-            97-300 Piotrków Trybunalski
+            93-590 Łódź
             <br />
-            tel. 534 014 006
+            tel. (+48) 42 631 39 51
             <br />
-            e-mail: biuro@edanpiotrkow.pl
+            e-mail: w2k23@adm.p.lodz.pl
           </Typography>
         </Container>
       </Box>

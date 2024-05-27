@@ -3,13 +3,13 @@ import { Typography, Grid, ListItem, ListItemIcon, ListItemText } from '@mui/mat
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export const Location = () => {
-  const locationCoordinates = [51.405888, 19.715845];
+  const locationCoordinates = [51.747059, 19.453930];
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Typography variant="h2" mt={4} align="center" gutterBottom>
-          Gdzie jesteśmy?
+          Odwiedź nasze biuro
         </Typography>
       </Grid>
 
@@ -21,8 +21,8 @@ export const Location = () => {
           <ListItemText
             primary={
               <Typography variant="h4">
-                Piotrków Trybunalski <br />
-                ul. Sulejowska 45
+                Łódź <br />
+                Al. Politechniki 8
               </Typography>
             }
           />
@@ -31,11 +31,8 @@ export const Location = () => {
           Godziny otwarcia
         </Typography>
         <Typography>
-          (wejście klientów do godz. 19:00)
-        </Typography>
-        <Typography>
-          Poniedziałek - Piątek: 15:00 - 20:00 <br />
-          Sobota - Niedziela: 10:00 - 20:00
+          Poniedziałek - Piątek: 9:00 - 16:00 <br />
+          Sobota - Niedziela: 8:00 - 15:00
         </Typography>
       </Grid>
 
