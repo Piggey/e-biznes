@@ -1,12 +1,15 @@
 import { Box } from "@mui/material"
-import { ImageGallery } from "../components/ImageGallery";
+import { OfferGallery } from "../components/OfferGallery";
 import { Reviews } from "../components/Reviews";
 import { Location } from "../components/Location";
+import SearchForm from "../components/SearchForm";
+import OfferCard from "../components/OfferCard";
 
 export const Home = () => {
   return (
     <Box>
-      <ImageGallery />
+      <SearchForm />
+      <OfferGallery />
       <Reviews />
       <Location />
     </Box>
