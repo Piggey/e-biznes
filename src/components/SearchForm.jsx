@@ -31,7 +31,7 @@ export default function SearchForm() {
     <Container>
       <Box sx={{ mt: 4 }}>
         <Grid item xs={12}>
-          <Typography variant="h2" mt={4} align="center" gutterBottom>
+          <Typography variant="h2" mt={12} align="center" gutterBottom>
             Wyszukaj oferty
           </Typography>
         </Grid>

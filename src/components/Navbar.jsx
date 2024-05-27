@@ -49,7 +49,7 @@ export const Navbar = () => {
         </div>
 
         <div style={{ display: "flex", justifyContent: "center", flexGrow: 1 }}>
-          <Button color="inherit" component={Link} to="/offer">
+          <Button color="inherit" component={Link} to="/offers">
             Oferta
           </Button>
           <Button color="inherit" component={Link} to="/contact">
