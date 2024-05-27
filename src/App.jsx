@@ -18,10 +18,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/gallery",
+    path: "/offers",
     element: (
       <Layout>
-        <Gallery />
+        <Offers />
       </Layout>
     ),
   },
