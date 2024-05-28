@@ -1,12 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Layout } from "./Layout";
 import { Home } from "./pages/Home";
-import { Gallery } from "./pages/Gallery";
 import { Bar } from "./pages/Bar";
 import { Tickets } from "./pages/Tickets";
 import { BirthdayReservations } from "./pages/BirthdayReservations";
 import { Login } from "./pages/Login";
 import { History } from "./pages/History";
+import Offers from "./pages/Offers";
 
 const router = createBrowserRouter([
   {
