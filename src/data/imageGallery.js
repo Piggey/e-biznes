@@ -1,9 +1,9 @@
 
 export const imgGalleryData = [
   {
-    name: 'Basen z kulkami',
-    description: 'Basen z kulkami w centrum zabaw dla dzieci to kolorowe miejsce pełne radości, gdzie najmłodsi mogą swobodnie skakać, nurkować i cieszyć się bezpieczną zabawą w otoczeniu miękkich i kolorowych kulek.',
-    imgSrc: 'src/assets/basen_z_kulkami.jpg',
+    name: 'Ładne skałki',
+    description: 'Bardzo ładne są one. https://r.pl/blizej-bogow/zakwaterowanie-zto?czyCenaZaWszystkich=0&data=20240604&dlugoscPobytu=8&iataWyjazdu=POZ&liczbaPokoi=1&miastoWyjazdu=poznan&wiek=1991-06-23&wiek=1991-06-23&wyzywienie=sniadania',
+    imgSrc: 'src/assets/skalki.webp',
   },
   {
     name: 'Armatki',
