@@ -18,6 +18,7 @@ export const offers = [
     arrivalDate: new Date("2024-07-08"),
     pricePerPerson: 2000,
     currency: "PLN",
+    destination: "Turcja",
     opinions: [
       {
         id: 1,
@@ -47,6 +48,7 @@ export const offers = [
     arrivalDate: new Date("2024-08-08"),
     pricePerPerson: 2500,
     currency: "PLN",
+    destination: "Grecja",
     opinions: [
       {
         id: 2,
@@ -76,6 +78,7 @@ export const offers = [
     arrivalDate: new Date("2024-09-08"),
     pricePerPerson: 3000,
     currency: "PLN",
+    destination: "Hiszpania",
     opinions: [
       {
         id: 3,

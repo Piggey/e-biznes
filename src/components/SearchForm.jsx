@@ -11,9 +11,8 @@ import {
 import { DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { useNavigate } from 'react-router-dom';
-
-const destinations = ["Paryż", "Londyn", "Nowy Jork", "Tokyo", "Sydney"];
+import { useNavigate } from "react-router-dom";
+import { offers } from "../data/offers";
 
 export default function SearchForm() {
   const navigate = useNavigate();
@@ -27,8 +26,10 @@ export default function SearchForm() {
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
     console.log("Number of People:", people);
-    navigate('/offers', { state: { destination, startDate, endDate, people } });
+    navigate("/offers", { state: { destination, startDate, endDate, people } });
   };
+
+  const destinations = [...new Set(offers.map(offer => offer.destination))];
 
   return (
     <Container>
