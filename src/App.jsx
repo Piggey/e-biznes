@@ -6,7 +6,7 @@ import { Tickets } from "./pages/Tickets";
 import { BirthdayReservations } from "./pages/BirthdayReservations";
 import { Login } from "./pages/Login";
 import { History } from "./pages/History";
-import Offers from "./pages/Offers";
+import { Offers } from "./pages/Offers";
 
 const router = createBrowserRouter([
   {

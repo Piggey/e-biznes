@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Container, Grid, Typography } from '@mui/material';
 import { format } from 'date-fns';
-import OfferCard from '../components/OfferCard';
+import { OfferCard } from '../components/OfferCard';
 import { offers } from '../data/offers';
 
 export default function Offers() {
