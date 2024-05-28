@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Container, Grid, Typography } from "@mui/material";
 import { format } from "date-fns";
 import { offers } from "../data/offers";
-import { OfferCard } from "../components/OfferCard";
+import { OfferElement } from "../components/OfferElement";
 
 export const Offers = () => {
   const location = useLocation();
@@ -22,9 +22,7 @@ export const Offers = () => {
       </Typography>
       <Grid container spacing={2}>
         {filteredOffers.map((offer) => (
-          <Grid item xs={12} sm={6} md={4} key={offer.id}>
-            <OfferCard offer={offer} />
-          </Grid>
+          <OfferElement key={offer.id} offer={offer} />
         ))}
       </Grid>
     </Container>
