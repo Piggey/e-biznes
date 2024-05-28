@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Container, Grid, Typography } from "@mui/material";
 import { format } from "date-fns";
 import { offers } from "../data/offers";
@@ -22,7 +22,9 @@ export const Offers = () => {
       </Typography>
       <Grid container spacing={2}>
         {filteredOffers.map((offer) => (
-          <OfferElement key={offer.id} offer={offer} />
+          <Link to={`/offer/${offer.id}`} key={offer.id} style={{ textDecoration: 'none' }}>
+            <OfferElement offer={offer} />
+          </Link>
         ))}
       </Grid>
     </Container>
