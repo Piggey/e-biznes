@@ -1,6 +1,6 @@
 import { Grid, Typography, Container } from "@mui/material";
 import { offers } from '../data/offers'
-import OfferCard from "./OfferCard";
+import { OfferCard } from "./OfferCard";
 
 export const OfferGallery = () => {
   return (

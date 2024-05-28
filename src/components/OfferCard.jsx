@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 
-export default function OfferCard({ offer }) {
+export const OfferCard = ({ offer }) => {
   return (
     <Card>
       <CardMedia
