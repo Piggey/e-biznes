@@ -14,7 +14,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useNavigate } from "react-router-dom";
 import { offers } from "../data/offers";
 
-export default function SearchForm() {
+export const SearchForm = () => {
   const navigate = useNavigate();
   const [destination, setDestination] = useState("");
   const [startDate, setStartDate] = useState(new Date());

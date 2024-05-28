@@ -4,7 +4,7 @@ import L from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
-export default function OpenStreetMapWindow({ coords }) {
+export const OpenStreetMapWindow = ({ coords }) => {
   // Ikona pinezki
   const pinIcon = new L.Icon({
     iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',

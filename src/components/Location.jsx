@@ -1,9 +1,15 @@
-import OpenStreetMapWindow from './OpenStreetMapWindow';
-import { Typography, Grid, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { OpenStreetMapWindow } from "../components/OpenStreetMapWindow";
+import {
+  Typography,
+  Grid,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export const Location = () => {
-  const locationCoordinates = [51.747059, 19.453930];
+  const locationCoordinates = [51.747059, 19.45393];
 
   return (
     <Grid container spacing={2}>
@@ -27,9 +33,7 @@ export const Location = () => {
             }
           />
         </ListItem>
-        <Typography variant="h5">
-          Godziny otwarcia
-        </Typography>
+        <Typography variant="h5">Godziny otwarcia</Typography>
         <Typography>
           Poniedziałek - Piątek: 9:00 - 16:00 <br />
           Sobota - Niedziela: 8:00 - 15:00
