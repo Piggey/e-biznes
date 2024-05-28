@@ -9,27 +9,30 @@ import {
   Grid,
 } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { useNavigate } from "react-router-dom";
 import { offers } from "../data/offers";
 
 export const SearchForm = () => {
   const navigate = useNavigate();
   const [destination, setDestination] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-  const [people, setPeople] = useState(1);
+  const [dateFrom, setDateFrom] = useState(null);
+  const [dateTo, setDateTo] = useState(null);
+  const [numPeople, setNumPeople] = useState(1);
 
   const handleSearch = () => {
-    console.log("Destination:", destination);
-    console.log("Start Date:", startDate);
-    console.log("End Date:", endDate);
-    console.log("Number of People:", people);
-    navigate("/offers", { state: { destination, startDate, endDate, people } });
+    navigate("/offers", {
+      state: {
+        destination,
+        dateFrom,
+        dateTo,
+        numPeople,
+      },
+    });
   };
 
-  const destinations = [...new Set(offers.map(offer => offer.destination))];
+  const uniqueDestinations = [
+    ...new Set(offers.map((offer) => offer.destination)),
+  ];
 
   return (
     <Container>
@@ -49,37 +52,34 @@ export const SearchForm = () => {
         >
           <TextField
             select
-            label="Dokąd?"
+            label="Dokąd chcesz jechać?"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
             variant="outlined"
             sx={{ minWidth: 150 }}
           >
-            {destinations.map((option) => (
-              <MenuItem key={option} value={option}>
-                {option}
+            {uniqueDestinations.map((dest) => (
+              <MenuItem key={dest} value={dest}>
+                {dest}
               </MenuItem>
             ))}
           </TextField>
-          <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <DatePicker
-              label="Od"
-              value={startDate}
-              onChange={(newValue) => setStartDate(newValue)}
-              renderInput={(params) => <TextField {...params} />}
-            />
-            <DatePicker
-              label="Do"
-              value={endDate}
-              onChange={(newValue) => setEndDate(newValue)}
-              renderInput={(params) => <TextField {...params} />}
-            />
-          </LocalizationProvider>
+          <DatePicker
+            label="Od"
+            value={dateFrom}
+            onChange={(newValue) => setDateFrom(newValue)}
+            renderInput={(params) => <TextField {...params} fullWidth />}
+          />
+          <DatePicker
+            label="Do"
+            value={dateTo}
+            onChange={(newValue) => setDateTo(newValue)}
+            renderInput={(params) => <TextField {...params} fullWidth />}
+          />
           <TextField
-            type="number"
             label="Liczba osób"
-            value={people}
-            onChange={(e) => setPeople(e.target.value)}
+            value={numPeople}
+            onChange={(e) => setNumPeople(e.target.value)}
             inputProps={{ min: 1 }}
             variant="outlined"
             sx={{ maxWidth: 100 }}
@@ -91,4 +91,4 @@ export const SearchForm = () => {
       </Box>
     </Container>
   );
-}
+};
