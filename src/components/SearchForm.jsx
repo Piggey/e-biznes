@@ -11,13 +11,15 @@ import {
 import { DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { useNavigate } from 'react-router-dom';
 
 const destinations = ["Paryż", "Londyn", "Nowy Jork", "Tokyo", "Sydney"];
 
 export default function SearchForm() {
+  const navigate = useNavigate();
   const [destination, setDestination] = useState("");
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [people, setPeople] = useState(1);
 
   const handleSearch = () => {
@@ -25,6 +27,7 @@ export default function SearchForm() {
     console.log("Start Date:", startDate);
     console.log("End Date:", endDate);
     console.log("Number of People:", people);
+    navigate('/offers', { state: { destination, startDate, endDate, people } });
   };
 
   return (
