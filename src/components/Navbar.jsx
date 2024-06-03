@@ -48,21 +48,11 @@ export const Navbar = () => {
           </Typography>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", flexGrow: 1 }}>
-          <Button color="inherit" component={Link} to="/offers">
-            Oferta
-          </Button>
-          <Button color="inherit" component={Link} to="/contact">
-            Kontakt
-          </Button>
+        <div style={{ display: "flex", justifyContent: "right", flexGrow: 1 }}>
           {email && (
             <Grid>
               <Button color="inherit" component={Link} to="/tickets">
-                Bilety
-              </Button>
-
-              <Button color="inherit" component={Link} to="/birthdays">
-                Urodziny
+                Wycieczki
               </Button>
             </Grid>
           )}
@@ -94,12 +84,6 @@ export const Navbar = () => {
               }}
             >
               <MenuItem onClick={handleClose}>
-                <Link
-                  to="/history"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  Historia
-                </Link>
               </MenuItem>
               <MenuItem onClick={handleLogout}>
                 <Link
