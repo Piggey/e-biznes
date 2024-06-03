@@ -1,6 +1,6 @@
 // Komponent Offer.jsx
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardMedia, Button, Divider, List, ListItem, ListItemText } from '@mui/material';
 import { offers } from '../data/offers';
 import { Gallery } from '../components/Gallery';
@@ -9,6 +9,7 @@ import { OpenStreetMapWindow } from '../components/OpenStreetMapWindow';
 
 export const Offer = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const offer = offers.find(offer => offer.id === parseInt(id));
 
   if (!offer) {
@@ -20,6 +21,10 @@ export const Offer = () => {
       </Container>
     );
   }
+
+  const handleReserve = () => {
+    navigate(`/offer/${offer.id}/reserve`);
+  };
 
   return (
     <Container sx={{ mt: 4 }}>
@@ -50,7 +55,7 @@ export const Offer = () => {
           <Typography variant="body1" gutterBottom>
             Cena za osobę: {offer.pricePerPerson} {offer.currency}
           </Typography>
-          <Button variant="contained" color="primary" href="#" sx={{ mt: 2 }}>
+          <Button variant="contained" color="primary" onClick={handleReserve} sx={{ mt: 2 }}>
             Rezerwuj
           </Button>
         </Grid>

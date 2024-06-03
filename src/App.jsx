@@ -8,6 +8,7 @@ import { Login } from "./pages/Login";
 import { History } from "./pages/History";
 import { Offers } from "./pages/Offers";
 import { Offer } from "./pages/Offer";
+import { Reserve } from "./pages/Reserve";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,14 @@ const router = createBrowserRouter([
         <Offer />
       </Layout>
     ),
+  },
+  {
+    path: '/offer/:id/reserve',
+    element: (
+      <Layout>
+        <Reserve />
+      </Layout>
+    )
   },
   {
     path: "/bar",
