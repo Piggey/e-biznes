@@ -4,12 +4,16 @@ import StarIcon from '@mui/icons-material/Star';
 
 export const OfferCard = ({ offer }) => {
   return (
-    <Card>
+    <Card sx={{ minHeight: 400 }}>
       <CardMedia
         component="img"
-        height="140"
         image={offer.thumbnailUrl}
         alt={offer.name}
+        sx={{
+          height: 240,
+          width: '100%',
+          objectFit: 'cover'
+        }}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -32,4 +36,4 @@ export const OfferCard = ({ offer }) => {
       </CardContent>
     </Card>
   );
-}
+};
