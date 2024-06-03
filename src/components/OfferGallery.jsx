@@ -13,7 +13,7 @@ export const OfferGallery = () => {
 
       <Container sx={{ mt: 4 }}>
       <Grid container spacing={2}>
-        {offers.map((offer) => (
+        {offers.slice(0, 3).map((offer) => (
           <Grid item xs={12} sm={6} md={4} key={offer.name}>
             <OfferCard offer={offer} />
           </Grid>
