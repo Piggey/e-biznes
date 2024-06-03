@@ -19,6 +19,8 @@ export const offers = [
     pricePerPerson: 2000,
     currency: "PLN",
     destination: "Turcja",
+    lat: 38.9637,
+    lon: 35.2433,
     opinions: [
       {
         id: 1,
@@ -27,7 +29,8 @@ export const offers = [
         rating: 5,
         opinion: "Niesamowita wycieczka! Wszystko było doskonale zorganizowane."
       }
-    ]
+    ],
+    attractions: ["Plaża do 100m", "Darmowe Wi-Fi", "Wycieczki z przewodnikiem"]
   },
   {
     id: 2,
@@ -49,6 +52,8 @@ export const offers = [
     pricePerPerson: 2500,
     currency: "PLN",
     destination: "Grecja",
+    lat: 37.9838,
+    lon: 23.7275,
     opinions: [
       {
         id: 2,
@@ -57,7 +62,8 @@ export const offers = [
         rating: 5,
         opinion: "Grecja jest piękna, a ta wycieczka była wyjątkowa!"
       }
-    ]
+    ],
+    attractions: ["Blisko starożytne ruiny", "Darmowe Wi-Fi", "Dostęp do basenu"]
   },
   {
     id: 3,
@@ -79,6 +85,8 @@ export const offers = [
     pricePerPerson: 3000,
     currency: "PLN",
     destination: "Hiszpania",
+    lat: 40.4168,
+    lon: -3.7038,
     opinions: [
       {
         id: 3,
@@ -87,6 +95,7 @@ export const offers = [
         rating: 5,
         opinion: "Hiszpania ma wszystko, czego potrzebujesz na idealne wakacje!"
       }
-    ]
+    ],
+    attractions: ["Blisko plaży", "Darmowe Wi-Fi", "Lekcje flamenco"]
   }
 ];
