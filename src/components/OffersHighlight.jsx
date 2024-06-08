@@ -1,40 +1,47 @@
-import { Grid, Typography, IconButton, Paper } from "@mui/material";
+import { Grid, Typography, IconButton, Paper, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useState } from "react";
-import { imgGalleryData } from "../data/imageGallery";
+import { useNavigate } from "react-router-dom";
+import { offers } from "../data/offers";
 
-export const ImageGallery = () => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+export const OffersHighlight = () => {
+  const [selectedOfferIndex, setSelectedOfferIndex] = useState(0);
+  const navigate = useNavigate();
+
+  const maxOffers = 3;
+  const visibleOffers = offers.slice(0, maxOffers);
+  const { id, name, shortDescription, destination, pricePerPerson, thumbnailUrl, currency } = visibleOffers[selectedOfferIndex];
 
   const handleNextImage = () => {
-    setSelectedImageIndex(
-      (prevIndex) => (prevIndex + 1) % imgGalleryData.length
+    setSelectedOfferIndex(
+      (prevIndex) => (prevIndex + 1) % maxOffers
     );
   };
 
   const handlePrevImage = () => {
-    setSelectedImageIndex(
+    setSelectedOfferIndex(
       (prevIndex) =>
-        (prevIndex - 1 + imgGalleryData.length) % imgGalleryData.length
+        (prevIndex - 1 + maxOffers) % maxOffers
     );
   };
 
-  const { name, description, imgSrc } = imgGalleryData[selectedImageIndex];
+  const handleNavigateToOffer = () => {
+    navigate(`/offer/${id}`);
+  };
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Typography variant="h2" mt={4} align="center" gutterBottom>
-        Wymarzone wakacje czekają!
+          Wymarzone wakacje czekają!
         </Typography>
       </Grid>
 
-      {/* Duże zdjęcie po lewej stronie z animacją Zoom */}
       <Grid item xs={12} md={8} style={{ position: "relative" }}>
         <Paper elevation={3} style={{ position: "relative" }}>
           <img
-            src={imgSrc}
+            src={thumbnailUrl}
             alt={name}
             style={{ width: "100%", height: "auto", maxHeight: "400px" }}
           />
@@ -76,7 +83,6 @@ export const ImageGallery = () => {
         </Paper>
       </Grid>
 
-      {/* Tytuł i opis zdjęcia po prawej stronie */}
       <Grid
         item
         xs={12}
@@ -90,10 +96,20 @@ export const ImageGallery = () => {
         <Typography variant="h4" style={{ marginBottom: "16px" }}>
           {name}
         </Typography>
-        <Typography variant="body1">{description}</Typography>
+        <Typography variant="h6" style={{ marginBottom: "16px" }}>
+          {destination}
+        </Typography>
+        <Typography variant="body1" style={{ marginBottom: "16px" }}>
+          {shortDescription}
+        </Typography>
+        <Typography variant="body1" style={{ marginBottom: "16px" }}>
+          Cena za osobę: {pricePerPerson} {currency}
+        </Typography>
+        <Button variant="contained" color="primary" onClick={handleNavigateToOffer}>
+          Przejdź do oferty
+        </Button>
       </Grid>
 
-      {/* Miniatury zdjęć pod dużym zdjęciem z odstępami */}
       <Grid
         item
         xs={12}
@@ -105,18 +121,18 @@ export const ImageGallery = () => {
           justifyContent: "center",
         }}
       >
-        {imgGalleryData.map((data, index) => (
+        {visibleOffers.map((offer, index) => (
           <img
             key={index}
-            src={data.imgSrc}
-            alt={data.name}
+            src={offer.thumbnailUrl}
+            alt={offer.name}
             style={{
               width: "64px",
               height: "64px",
               cursor: "pointer",
-              border: index === selectedImageIndex ? "2px solid blue" : "none", // Podświetlenie wybranej miniatury
+              border: index === selectedOfferIndex ? "2px solid blue" : "none",
             }}
-            onClick={() => setSelectedImageIndex(index)}
+            onClick={() => setSelectedOfferIndex(index)}
           />
         ))}
       </Grid>
