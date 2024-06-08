@@ -4,7 +4,7 @@ export const offers = [
     name: "Wycieczka do Turcji",
     shortDescription: "Zwiedzanie zabytków, wyśmienite jedzenie i wspaniałe plaże.",
     longDescription: "Odkryj bogatą historię Turcji, odwiedzając jej najważniejsze zabytki, delektując się wyśmienitą kuchnią i relaksując na pięknych plażach.",
-    thumbnailUrl: "src/assets/1-turcja/thumb.webp",
+    thumbnailUrl: "https://github.com/Piggey/e-biznes/blob/161b0016266b84f7f9b11a5e94da24aa2a4dc815/src/assets/1-turcja/thumb.webp",
     imgUrls: [
       "src/assets/1-turcja/thumb.webp",
       "src/assets/1-turcja/1.webp",
