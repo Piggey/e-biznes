@@ -28,7 +28,7 @@ export const Login = () => {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(src/assets/login.jpg)',
+            backgroundImage: 'url(https://raw.githubusercontent.com/Piggey/e-biznes/161b0016266b84f7f9b11a5e94da24aa2a4dc815/src/assets/login.jpg)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],

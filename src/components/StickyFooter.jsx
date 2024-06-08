@@ -23,7 +23,7 @@ export const StickyFooter = () => {
         <Container maxWidth="sm">
           <div style={{ display: "flex", alignItems: "center" }}>
             <img
-              src="src/assets/logo.png"
+              src="https://raw.githubusercontent.com/Piggey/e-biznes/161b0016266b84f7f9b11a5e94da24aa2a4dc815/src/assets/logo.png"
               alt="Globetrotter Travel Logo"
               style={{ width: 50, marginRight: 10 }}
             />
