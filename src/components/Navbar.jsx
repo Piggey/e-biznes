@@ -51,7 +51,7 @@ export const Navbar = () => {
         <div style={{ display: "flex", justifyContent: "right", flexGrow: 1 }}>
           {email && (
             <Grid>
-              <Button color="inherit" component={Link} to="/tickets">
+              <Button color="inherit" component={Link} to="/offers/edit">
                 Wycieczki
               </Button>
             </Grid>
