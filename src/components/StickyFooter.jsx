@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import { Copyright } from "./Copyright";
 
 export const StickyFooter = () => {
   return (
@@ -30,6 +31,7 @@ export const StickyFooter = () => {
               <Typography variant="h6">
                 Biuro Podróży Globetrotter Travel
               </Typography>
+              <Copyright />
             </div>
           </div>
         </Container>
