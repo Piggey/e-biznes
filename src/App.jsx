@@ -5,6 +5,7 @@ import { Login } from "./pages/Login";
 import { Offers } from "./pages/Offers";
 import { Offer } from "./pages/Offer";
 import { Reserve } from "./pages/Reserve";
+import { OffersEdit } from "./pages/OffersEdit";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
         <Offers />
       </Layout>
     ),
+  },
+  {
+    path: "/offers/edit",
+    element: (
+      <Layout>
+        <OffersEdit />
+      </Layout>
+    )
   },
   {
     path: "/offer/:id",
