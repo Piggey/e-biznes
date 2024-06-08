@@ -14,19 +14,21 @@ export const Offers = () => {
   );
 
   return (
-    <Container sx={{ mt: 4 }}>
+    <Container sx={{ mt: 12 }}>
       <Typography variant="h4" gutterBottom>
         Oferty dla: {destination} ({numPeople} osób, od{" "}
         {format(new Date(dateFrom), "dd-MM-yyyy")} do{" "}
         {format(new Date(dateTo), "dd-MM-yyyy")})
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         {filteredOffers.map((offer) => (
-          <Link to={`/offer/${offer.id}`} key={offer.id} style={{ textDecoration: 'none' }}>
-            <OfferElement offer={offer} />
-          </Link>
+          <Grid item xs={12} key={offer.id}>
+            <Link to={`/offer/${offer.id}`} style={{ textDecoration: 'none' }}>
+              <OfferElement offer={offer} />
+            </Link>
+          </Grid>
         ))}
       </Grid>
     </Container>
   );
-}
+};
