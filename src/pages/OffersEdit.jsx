@@ -14,9 +14,9 @@ import {
   DialogContent,
   DialogTitle,
 } from "@mui/material";
-import { offers as initialOffers } from "../data/offers";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { useOffers } from "../data/OffersContext";
 
 const OfferForm = ({ offer, handleChange, handleSave, handleClose, editMode }) => (
   <Dialog open onClose={handleClose}>
@@ -169,7 +169,7 @@ const OfferForm = ({ offer, handleChange, handleSave, handleClose, editMode }) =
 );
 
 export const OffersEdit = () => {
-  const [offers, setOffers] = useState(initialOffers);
+  const { offers, setOffers } = useOffers();
   const [open, setOpen] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [editMode, setEditMode] = useState(false);
