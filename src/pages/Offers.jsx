@@ -2,10 +2,11 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Container, Grid, Typography } from "@mui/material";
 import { format } from "date-fns";
-import { offers } from "../data/offers";
 import { OfferElement } from "../components/OfferElement";
+import { useOffers } from "../data/OffersContext";
 
 export const Offers = () => {
+  const { offers } = useOffers();
   const location = useLocation();
   const { destination, dateFrom, dateTo, numPeople } = location.state;
 

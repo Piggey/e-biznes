@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Typography, TextField, Button, Grid, Card, CardMedia, Divider, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
-import { offers } from '../data/offers';
+import { useOffers } from '../data/OffersContext';
 
 export const Reserve = () => {
+  const { offers } = useOffers();
   const { id } = useParams();
   const offer = offers.find(offer => offer.id === parseInt(id));
 

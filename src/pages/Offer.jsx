@@ -2,12 +2,13 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardMedia, Button, Divider, List, ListItem, ListItemText } from '@mui/material';
-import { offers } from '../data/offers';
 import { Gallery } from '../components/Gallery';
 import { Opinions } from '../components/Opinions';
 import { OpenStreetMapWindow } from '../components/OpenStreetMapWindow';
+import { useOffers } from '../data/OffersContext';
 
 export const Offer = () => {
+  const { offers } = useOffers();
   const { id } = useParams();
   const navigate = useNavigate();
   const offer = offers.find(offer => offer.id === parseInt(id));

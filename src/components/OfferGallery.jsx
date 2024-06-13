@@ -1,9 +1,11 @@
 import { Grid, Typography, Container } from "@mui/material";
-import { offers } from '../data/offers'
 import { OfferCard } from "./OfferCard";
 import { Link } from "react-router-dom";
+import { useOffers } from "../data/OffersContext";
 
 export const OfferGallery = () => {
+  const { offers } = useOffers()
+
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>

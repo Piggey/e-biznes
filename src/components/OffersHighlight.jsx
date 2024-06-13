@@ -3,9 +3,10 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { offers } from "../data/offers";
+import { useOffers } from "../data/OffersContext";
 
 export const OffersHighlight = () => {
+  const { offers } = useOffers();
   const [selectedOfferIndex, setSelectedOfferIndex] = useState(0);
   const navigate = useNavigate();
 

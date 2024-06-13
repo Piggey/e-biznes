@@ -10,9 +10,10 @@ import {
 } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { useNavigate } from "react-router-dom";
-import { offers } from "../data/offers";
+import { useOffers } from "../data/OffersContext";
 
 export const SearchForm = () => {
+  const { offers } = useOffers();
   const navigate = useNavigate();
   const [destination, setDestination] = useState("");
   const [dateFrom, setDateFrom] = useState(null);
