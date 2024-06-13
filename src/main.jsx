@@ -8,12 +8,15 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+import { OffersProvider } from "./data/OffersContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <App />
+        <OffersProvider>
+          <App />
+        </OffersProvider>
       </LocalizationProvider>
     </AuthProvider>
   </React.StrictMode>
